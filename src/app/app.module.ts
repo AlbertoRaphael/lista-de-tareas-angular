@@ -28,5 +28,5 @@ import { TranslocoModule } from '@ngneat/transloco';
         TranslocoRootModule,
         StandaloneComponent
     ]
-})
+}) 
 export class AppModule {}
