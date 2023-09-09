@@ -3,7 +3,11 @@
     "Welcome": "Bienvenido",
     "Name of the task:":"Nombre de la tarea:",
     "Save":"Guardar",
-    "Translate":"Traducir"
+    "Translate":"Traducir",
+    "Enter the task":"Ingresa la tarea",
+    "errors": {
+        "invalidText": "Debe ingresar una tarea"
+      }    
 
 
 }

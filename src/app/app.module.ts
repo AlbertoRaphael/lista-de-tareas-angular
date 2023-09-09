@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { TranslocoRootModule } from './transloco-root.module';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StandaloneComponent } from "./components/standalone/standalone.component";
 import { TranslocoModule } from '@ngneat/transloco';
 
@@ -23,6 +23,7 @@ import { TranslocoModule } from '@ngneat/transloco';
         BrowserAnimationsModule,
         FormsModule,
         MatButtonModule,
+        ReactiveFormsModule,
         MatIconModule,
         TranslocoRootModule,
         StandaloneComponent

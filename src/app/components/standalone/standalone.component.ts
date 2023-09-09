@@ -15,7 +15,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-//import { ReactiveformsModel } from './Forms.component';
+//import { ReactiveFormsModule } from "@angular/forms";
 //import { NgxTrimDirectiveModule } from 'ngx-trim-directive';
 
 
@@ -33,7 +33,6 @@ import { MatInputModule } from '@angular/material/input';
     TranslocoModule,
     MatInputModule,
     MatFormFieldModule,
-    ReactiveFormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
     StandaloneComponent,
@@ -41,6 +40,7 @@ import { MatInputModule } from '@angular/material/input';
     MatListModule,
     MatToolbarModule,
     MatSidenavModule,
+    ReactiveFormsModule,
     BrowserModule]
 
 })
@@ -50,7 +50,7 @@ import { MatInputModule } from '@angular/material/input';
 
 export class StandaloneComponent implements OnInit {
 
-
+  //formGroup: FormGroup;
 
   title = 'lista-de-tareas-angular';
   date = new Date();
@@ -67,11 +67,17 @@ export class StandaloneComponent implements OnInit {
 
 
 
-  constructor(private _formBuilder:FormBuilder) {}
+  constructor(public _formBuilder:FormBuilder) {}
   formGroup = this._formBuilder.group({
-    name:[null,Validators.required]
-  })
+    //text:["",[Validators.pattern('/[a-zA-Z]/')]]
+  text:[null, [Validators.required,Validators.minLength(2)]],
+   //text: [null, Validators.text],
+  
+  });
    
+  
+
+
   nameTask = ""
 
   public tasks: TaskPending[] = []
@@ -79,10 +85,21 @@ export class StandaloneComponent implements OnInit {
     const newTask = new TaskPending(this.nameTask);
     this.tasks.push(newTask);
     this.tasksService.saveTasks(this.tasks);
-    this.getTasks();
+
+    if (this.formGroup.valid) {
+      console.log(this.formGroup.value);
+      this.getTasks();
+    } else {
+      alert("ERROR!");
+     
+    }
     // Y limpiamos el input
     this.nameTask = "";
-  }
+
+  } 
+
+ 
+
   /*
   Nota: aquí utilizo el índice porque solo trabajo con un array. Si tú usas
   una base de datos probablemente quieras usar el ID del elemento en lugar del índice
@@ -106,6 +123,7 @@ export class StandaloneComponent implements OnInit {
   getTasks() {
     this.tasks = this.tasksService.getTasks();
   }
+
   ngOnInit(): void {
     this.getTasks();
     /**
@@ -119,6 +137,7 @@ export class StandaloneComponent implements OnInit {
   clickTranslate(language: string): void {
     this._translocoService.setActiveLang(language);
   }
+
   
 }
 

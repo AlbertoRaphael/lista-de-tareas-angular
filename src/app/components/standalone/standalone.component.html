@@ -74,12 +74,20 @@
 
     .content {
         display: flex;
-        margin: 82px auto 32px;
+        margin: 82px auto 5px;
         padding: 0 16px;
         max-width: 960px;
         flex-direction: column;
         align-items: center;
 
+    }
+    .task{
+        display: flex;
+        margin: 1px auto 5px;
+        padding: 0 16px;
+        max-width: 960px;
+        flex-direction: column;
+        align-items: center;
     }
 
     svg.material-icons {
@@ -186,7 +194,7 @@
 
 
 
-
+<div class="task">
     <input type="hidden" #selection>
 
     <h1>{{ "Task list with Angular" | transloco }}</h1>
@@ -194,18 +202,37 @@
 
     <h2> <label for="tarea">{{"Nombre de la tarea:"| transloco }}</label></h2>
 
+
+   <form class="form" [formGroup]="formGroup">
+    <mat-form-field appearance="fill">
+        <mat-label>{{ "Ingresa la tarea" | transloco }}</mat-label>
+        <input 
+        matInput formControlName="text" 
+        type="text"
+        [(ngModel)]="nameTask" 
+        id="tarea"
+        />
+        <div
+            *ngIf="formGroup.controls['text'].invalid &&
+              (formGroup.controls['text'].dirty || formGroup.controls['text'].touched)"
+            class="alert alert-danger"
+          >
+          </div>
+        <mat-error>{{ "errors.invalidText" | transloco }}</mat-error>
+      </mat-form-field>
+   
+    </form>
+</div>
     
-            <input  name="message" placeholder="Ingresa la tarea" type="text"
-                [(ngModel)]="nameTask" id="tarea">
-            
+      
+      
 
 
 
     <div class="button-guardar">
-        <button mat-flat-button color="primary" [disabled]="!nameTask" (click)="saveTask()">{{"Guardar"| transloco
-            }}</button>
+        <button mat-flat-button  color="primary" [disabled]="!nameTask" (click)="saveTask()" >{{"Guardar"| transloco}}</button>
     </div>
-    
+
 
 
     <ul>
@@ -224,7 +251,7 @@
         </li>
     </ul>
 
-</div>
+
 
 <!--  
     
