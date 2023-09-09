@@ -1,0 +1,52 @@
+li {
+	list-style: none;
+	margin-bottom: 5px;
+}
+
+a.enlace-eliminar {
+	margin-left: 10px;
+	text-decoration: none;
+	font-size: 1rem;
+}
+
+.tachado {
+	text-decoration: line-through;
+}
+
+.button-container {
+  display: inline-block;
+    justify-content: center;
+    width: 100px;
+  }
+ .button-guardar{
+    margin: 8px 8px 8px 0;
+ }
+ .translate{
+margin: 1px 5px 5px;
+
+ }
+ .barra-idioma{
+    margin: 2px 100px 0px;
+ }
+
+ .mat-mdc-radio-button ~ .mat-mdc-radio-button {
+    margin-left: 30px;
+  }
+
+  
+
+  .sidevav-container {
+   position: fixed;
+   width: 30%;
+   height: 30%;
+   &__sidenav {
+     width: 250px;
+     display: flex;
+     
+     margin: 200px 50px 0;
+     
+     
+   }
+ 
+   
+ }

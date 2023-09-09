@@ -1,0 +1,23 @@
+li {
+	list-style: none;
+	margin-bottom: 5px;
+}
+
+a.enlace-eliminar {
+	margin-left: 10px;
+	text-decoration: none;
+	font-size: 1rem;
+}
+
+.tachado {
+	text-decoration: line-through;
+}
+
+.button-container {
+  display: inline-block;
+    justify-content: center;
+    width: 100px;
+  }
+ .button-guardar{
+    margin: 8px 8px 8px 0;
+ }
