@@ -15,4 +15,4 @@ export class TareasService {
   saveTasks(tareas: TareaPendiente[]) {
     localStorage.setItem(this.CLAVE_LOCAL_STORAGE, JSON.stringify(tareas))
   }
-} 
+}  
