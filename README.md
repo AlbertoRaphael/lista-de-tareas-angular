@@ -1,5 +1,9 @@
 # ListaDeTareasAngular
 
+Lista de tareas pendientes con Angular - Todo list
+
+Es un proyecto de gestión de tareas pendientes con el framework Angular usando localStorage para el almacenamiento y TypeScript como lenguaje de programación y se usa la libreria transloco paratraducir la pagina web de español-ingles . 
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
 
 ## Development server
