@@ -17,7 +17,7 @@ ng add @ngneat/transloco --project=demo-transloco-angular
 Use the Angular CLI's installation schematic to set up your Angular Material project by running the following command:
 
 ng add @angular/material
-
+ 
 # Indicaciones de como funciona el sitio web
 1- se usa ng server para hecar aldar el programa.
 
