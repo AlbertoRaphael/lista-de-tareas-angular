@@ -5,4 +5,4 @@ export class TareaPendiente {
         this.terminada = terminada ? terminada : false;
         this.nombre = nombre;
     }
-}
+} 
