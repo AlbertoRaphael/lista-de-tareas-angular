@@ -233,7 +233,7 @@
         <button mat-flat-button  color="primary" [disabled]="!nameTask" (click)="saveTask()" >{{"Guardar"| transloco}}</button>
     </div>
 
-    
+      
 
     <ul>
         <li *ngFor="let tarea of tasks;let indice = index;" [class.tachado]="tarea.terminada">
