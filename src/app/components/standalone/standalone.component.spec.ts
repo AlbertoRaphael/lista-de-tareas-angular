@@ -10,7 +10,7 @@ describe('AppComponent', () => {
         StandaloneComponent
       ],
     }).compileComponents();
-  });
+  }); 
 
   it('should create the app', () => {
     const fixture = TestBed.createComponent(StandaloneComponent);
