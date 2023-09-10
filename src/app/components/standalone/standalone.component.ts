@@ -17,7 +17,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 //import { ReactiveFormsModule } from "@angular/forms";
 //import { NgxTrimDirectiveModule } from 'ngx-trim-directive';
-
+ 
 
 @Component({
   selector: 'app-standalone',
