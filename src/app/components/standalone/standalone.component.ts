@@ -15,8 +15,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-//import { ReactiveFormsModule } from "@angular/forms";
-//import { NgxTrimDirectiveModule } from 'ngx-trim-directive';
+
  
 
 @Component({
@@ -70,7 +69,8 @@ export class StandaloneComponent implements OnInit {
   constructor(public _formBuilder:FormBuilder) {}
   formGroup = this._formBuilder.group({
     //text:["",[Validators.pattern('/[a-zA-Z]/')]]
-  text:[null, [Validators.required,Validators.minLength(2)]],
+  //text:[null, [Validators.required,Validators.minLength(2)]],
+  text: ['', [Validators.required, Validators.pattern(/^[a-zA-Z]+$/)]],
    //text: [null, Validators.text],
   
   });
@@ -90,7 +90,10 @@ export class StandaloneComponent implements OnInit {
       console.log(this.formGroup.value);
       this.getTasks();
     } else {
+      //aqui saca la tarea pendiente en caso de nu cumplir con la validacion
+      this.tasks.pop();
       alert("ERROR!");
+      
      
     }
     // Y limpiamos el input
@@ -126,6 +129,7 @@ export class StandaloneComponent implements OnInit {
 
   ngOnInit(): void {
     this.getTasks();
+    
     /**
      * Si queremos saber cada vez que se cambia un idioma debemos de suscribirnos al Observable "langChanges$"
      */
