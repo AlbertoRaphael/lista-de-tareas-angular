@@ -2,7 +2,7 @@
 
 Lista de tareas pendientes con Angular - Todo list
 
-Es un proyecto de gestión de tareas pendientes con el framework Angular usando localStorage para el almacenamiento y TypeScript como lenguaje de programación y se usa la libreria transloco paratraducir la pagina web de español-ingles esta por default en idioma español. 
+Es un proyecto de gestión de tareas pendientes con el framework Angular usando localStorage para el almacenamiento y TypeScript como lenguaje de programación y se usa la libreria transloco paratraducir la pagina web de español-ingles esta por default en idioma español tiene validacion para evitar mandar tareas vacias. 
 
 # Instalación de la librería Transloco
 -se usa esta libreria para las traducciones.
@@ -20,7 +20,9 @@ Use the Angular CLI's installation schematic to set up your Angular Material pro
  
 # Indicaciones de como funciona el sitio web
 1- se usa ng server para iniciar el CLI el programa.
+
 2- se escoge el idioma deseado
+
 3- se escribe una tarea  y se le click el boton guardar para almacenarla en la lista de tareas pendientes.
 
 ![Alt text](image.png)
