@@ -4,16 +4,35 @@ Lista de tareas pendientes con Angular - Todo list
 
 Es un proyecto de gestión de tareas pendientes con el framework Angular usando localStorage para el almacenamiento y TypeScript como lenguaje de programación y se usa la libreria transloco paratraducir la pagina web de español-ingles . 
 
+# Instalación de la librería Transloco
+-se usa esta libreria para las traducciones.
+
+Realizamos la instalacion cpn la CLI de angular, ejecute el siguiente comando dentro de su proyecto Angular:
+
+ng add @ngneat/transloco --project=demo-transloco-angular
+
+# Install Angular Material
+-se usa esta librecia para los estilos
+
+Use the Angular CLI's installation schematic to set up your Angular Material project by running the following command:
+
+ng add @angular/material
+
+# Indicaciones de como funciona el sitio web
+1- se usa ng server para hecar aldar el programa.
+
+2- se escribe una tarea  y se le click el boton guardar para almacenarla en la lista de tareas pendientes.
+
 ![Alt text](image.png)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
 
 ## Development server
-
+*este comando es para hacer andar el programa
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
-
+*esto es para instalar componentes standalone
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
