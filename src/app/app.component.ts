@@ -15,7 +15,7 @@ import { TranslocoModule } from '@ngneat/transloco';
 export class AppComponent implements OnInit {
   title = 'lista-de-tareas-angular';
   date= new Date();
-
+ 
 
   constructor(
     private tasksService: TasksService ) {
