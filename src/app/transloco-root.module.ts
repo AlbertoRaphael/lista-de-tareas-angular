@@ -22,3 +22,4 @@ import { TranslocoHttpLoader } from './transloco-loader';
   ],
 })
 export class TranslocoRootModule {}
+ 
