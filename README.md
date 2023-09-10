@@ -9,19 +9,19 @@ Es un proyecto de gestión de tareas pendientes con el framework Angular usando 
 
 Realizamos la instalacion cpn la CLI de angular, ejecute el siguiente comando dentro de su proyecto Angular:
 
-ng add @ngneat/transloco --project=demo-transloco-angular
+`ng add @ngneat/transloco` 
 
 # Install Angular Material
 -se usa esta librecia para los estilos
 
 Use the Angular CLI's installation schematic to set up your Angular Material project by running the following command:
 
-ng add @angular/material
+`ng add @angular/material`
  
 # Indicaciones de como funciona el sitio web
-1- se usa ng server para hecar aldar el programa.
-
-2- se escribe una tarea  y se le click el boton guardar para almacenarla en la lista de tareas pendientes.
+1- se usa ng server para iniciar el CLI el programa.
+2- se escoge el idioma deseado
+3- se escribe una tarea  y se le click el boton guardar para almacenarla en la lista de tareas pendientes.
 
 ![Alt text](image.png)
 
