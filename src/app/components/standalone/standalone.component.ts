@@ -92,6 +92,7 @@ export class StandaloneComponent implements OnInit {
     } else {
       //aqui saca la tarea pendiente en caso de nu cumplir con la validacion
       this.tasks.pop();
+      
       alert("ERROR!");
       
      
